@@ -152,8 +152,10 @@ header h1 span{color:var(--sage)}
     <h2><em>4.</em>문구</h2>
     <div class="f"><label>표지 감성 문구 <small>2~3줄 짧게</small></label>
       <textarea id="lead" placeholder="서로의 계절을 지나&#10;같은 봄에 도착했습니다"></textarea></div>
-    <div class="f"><label>초대 섹션 제목</label>
+<div class="f"><label>초대 섹션 제목</label>
       <input id="inviteTitle" placeholder="소중한 분들을 초대합니다"></div>
+    <div class="f"><label>갤러리 섹션 제목</label>
+      <input id="galTitle" placeholder="우리의 순간들"></div>
     <div class="f"><label>초대 말씀</label>
       <textarea id="msg" style="min-height:150px" placeholder="서로 다른 두 사람이 만나&#10;하나의 길을 걸어가려 합니다.&#10;&#10;귀한 걸음 하시어&#10;저희의 시작을 축복해 주세요."></textarea></div>
     <div class="f"><label>맺음 문구 <small>맨 아래에 표시 · 비워도 돼요</small></label>
@@ -236,7 +238,7 @@ header h1 span{color:var(--sage)}
 
 <script>
 const IDS=['groom','bride','groomEn','brideEn','groomP','brideP','groomOrder','brideOrder',
-'date','time','venue','hall','addr','lead','inviteTitle','msg','footMsg',
+'date','time','venue','hall','addr','lead','inviteTitle','galTitle','msg','footMsg',
 'subway','bus','car','charter','slug','editKey'];
 const $=id=>document.getElementById(id);
 const toastEl=$('toast');let tt;
