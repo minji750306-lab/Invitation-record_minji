@@ -98,8 +98,8 @@ section{padding:72px 24px;word-break:keep-all;overflow-wrap:break-word}
 .cal .d{padding:9px 0;position:relative}
 .cal .sun{color:#B0765E}
 .cal .sat{color:var(--muted)}
-.cal .w{color:var(--white)}
-.cal .w::before{content:"";position:absolute;inset:2px 50% 2px 50%;width:34px;height:34px;transform:translateX(-50%);top:50%;margin-top:-17px;background:var(--ink);border-radius:50%;z-index:-1}
+.cal .w{color:var(--white);z-index:0}
+.cal .w::before{content:"";position:absolute;left:50%;top:50%;width:34px;height:34px;transform:translate(-50%,-50%);background:var(--ink);border-radius:50%;z-index:-1}
 .cal .w::after{content:"";position:absolute;left:50%;bottom:-4px;width:4px;height:4px;border-radius:50%;background:var(--gold);transform:translateX(-50%)}
 .dday{margin-top:34px;font-size:15px;letter-spacing:.03em}
 .dday b{color:var(--gold);font-weight:500}
@@ -239,7 +239,6 @@ footer .yr{margin-top:34px;font-size:11px;opacity:.55;font-family:'Noto Sans KR'
   <section class="acc" id="accSec">
     <div class="eyebrow fu">With gratitude</div>
     <h2 class="sec-title fu" style="color:var(--white)">마음 전하실 곳</h2>
-    <p class="desc fu">참석이 어려워 축하의 마음을 전하고 싶으신 분들을 위해<br>계좌번호를 안내드립니다.</p>
     <div id="accWrap"></div>
   </section>
 
@@ -353,7 +352,7 @@ function famLine(p,order,name){
 $('fam').innerHTML=famLine(D.groomP,D.groomOrder,D.groom)+'<br>'+famLine(D.brideP,D.brideOrder,D.bride);
 
 /* 캘린더 */
-$('calMonth').textContent=String(mo).padStart(2,'0');
+$('calMonth').textContent=mo+'월';
 $('calSub').textContent=`${y}년 ${mo}월 ${dt}일 ${dayName}요일 ${ampm} ${h12}시${mm?` ${mm}분`:''}`;
 const cal=$('cal');
 DAYS.forEach((d,i)=>{const e=document.createElement('div');e.className='h'+(i===0?' sun':i===6?' sat':'');e.textContent=d;cal.appendChild(e);});
