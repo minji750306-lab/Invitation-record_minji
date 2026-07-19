@@ -91,7 +91,7 @@ section{padding:72px 24px;word-break:keep-all;overflow-wrap:break-word}
 
 /* ── 캘린더 ── */
 .cal-wrap{max-width:320px;margin:0 auto;text-align:center}
-.cal-month{font-family:'Cormorant Garamond',serif;font-size:34px;letter-spacing:.2em;margin-bottom:4px}
+.cal-month{font-family:'Noto Serif KR',serif;font-size:27px;font-weight:500;letter-spacing:.12em;margin-bottom:6px}
 .cal-sub{font-size:13px;color:var(--muted);margin-bottom:26px;font-family:'Noto Sans KR',sans-serif}
 .cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px 0;font-family:'Noto Sans KR',sans-serif;font-size:13.5px}
 .cal .h{color:var(--muted);font-size:11px;padding-bottom:8px;letter-spacing:.1em}
@@ -231,7 +231,7 @@ footer .yr{margin-top:34px;font-size:11px;opacity:.55;font-family:'Noto Sans KR'
   <!-- 갤러리 -->
   <section id="galSec">
     <div class="eyebrow fu">Gallery</div>
-    <h2 class="sec-title fu">우리의 순간들</h2>
+    <h2 class="sec-title fu" id="galTitle">우리의 순간들</h2>
     <div class="gal-grid fu" id="gal"></div>
   </section>
 
@@ -394,6 +394,7 @@ T.forEach(([n,t,c])=>{
 });
 
 /* 갤러리 */
+if(D.galTitle)$('galTitle').textContent=D.galTitle;
 const imgs=(D.gallery||[]).filter(u=>u.trim());
 if(!imgs.length){$('galSec').style.display='none';}
 else{
