@@ -161,6 +161,7 @@ footer .share{
   padding:12px 28px;border-radius:999px;font-size:13.5px;cursor:pointer;font-family:'Noto Sans KR',sans-serif;white-space:nowrap;
 }
 footer .yr{margin-top:34px;font-size:11px;opacity:.55;font-family:'Noto Sans KR',sans-serif;letter-spacing:.15em}
+  footer .credit{margin-top:10px;font-size:10.5px;opacity:.4;font-family:'Noto Sans KR',sans-serif;letter-spacing:.08em;font-weight:300}
 
 /* 토스트 */
 #toast{
@@ -247,6 +248,7 @@ footer .yr{margin-top:34px;font-size:11px;opacity:.55;font-family:'Noto Sans KR'
     <p class="fu" id="footMsg" style="font-size:14px;line-height:2.3;font-weight:300;margin-bottom:30px;white-space:pre-line"></p>
     <button class="share fu" id="copyLink">청첩장 링크 복사하기</button>
     <div class="yr" id="yr"></div>
+    <div class="credit" id="credit"></div>
   </footer>
 </div>
 
@@ -258,6 +260,8 @@ footer .yr{margin-top:34px;font-size:11px;opacity:.55;font-family:'Noto Sans KR'
 <div id="toast"></div>
 
 <script>
+  const CREDIT_TEXT = 'made by 민지';  /* ← 크레딧 문구는 여기서만 바꾸면 돼요 */
+document.getElementById('credit').textContent = CREDIT_TEXT;
 /* ── 데이터 불러오기 ──
    1) /i.html?id=주소  → 저장소(API)에서 불러오기 (기본)
    2) /i.html?preview=1 → 에디터 미리보기
