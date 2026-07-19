@@ -394,7 +394,7 @@ T.forEach(([n,t,c])=>{
 });
 
 /* 갤러리 */
-if(D.galTitle)$('galTitle').textContent=D.galTitle;
+if(D.galTitle)$('galTitle').textContent=D.galTitle;else $('galTitle').style.display='none';
 const imgs=(D.gallery||[]).filter(u=>u.trim());
 if(!imgs.length){$('galSec').style.display='none';}
 else{
