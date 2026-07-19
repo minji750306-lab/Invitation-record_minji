@@ -17,8 +17,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#2E3A2C;--sage:#8A9478;--sage-lt:#E7EAE0;--cream:#F7F6F1;
-  --line:#DCDFD3;--white:#fff;--gold:#B79E72;--red:#B0765E;
+  --ink:#4A3238;--sage:#C08A96;--sage-lt:#F3E2E6;--cream:#FAF5F4;
+  --line:#EBDCDE;--white:#fff;--gold:#C9A68A;--red:#B0765E;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Noto Sans KR',sans-serif;background:var(--cream);color:var(--ink);padding-bottom:120px}
@@ -26,6 +26,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:var(--cream);color:var(--i
 header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:22px}
 header h1{font-family:'Noto Serif KR',serif;font-size:20px;font-weight:500}
 header h1 span{color:var(--sage)}
+  .credit{font-size:11.5px;color:#B9A8AC;font-weight:300;margin-top:5px;letter-spacing:.04em}
 .guide{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px;margin-bottom:24px;font-size:13.5px;line-height:2}
 .guide b{color:var(--sage)}
 .guide .tip{color:#8a8f83;font-size:12.5px}
@@ -96,7 +97,10 @@ header h1 span{color:var(--sage)}
 <body>
 <div class="wrap">
   <header>
-    <h1>🌿 모바일 청첩장 <span>에디터</span></h1>
+    <div>
+      <h1>💗 모바일 청첩장 <span>에디터</span></h1>
+      <p class="credit" id="credit"></p>
+    </div>
   </header>
 
   <div class="guide">
@@ -237,6 +241,8 @@ header h1 span{color:var(--sage)}
 <div id="toast"></div>
 
 <script>
+  const CREDIT_TEXT = 'made by 민지';  /* ← 크레딧 문구는 여기서만 바꾸면 돼요 */
+document.getElementById('credit').textContent = CREDIT_TEXT;
 const IDS=['groom','bride','groomEn','brideEn','groomP','brideP','groomOrder','brideOrder',
 'date','time','venue','hall','addr','lead','inviteTitle','galTitle','msg','footMsg',
 'subway','bus','car','charter','slug','editKey'];
