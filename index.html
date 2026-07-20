@@ -98,17 +98,18 @@ header h1 span{color:var(--sage)}
 <div class="wrap">
   <header>
     <div>
-      <h1>💗 모바일 청첩장 <span>에디터</span></h1>
+      <h1>💗 모바일 청첩장 <span>생성기</span></h1>
       <p class="credit" id="credit"></p>
     </div>
   </header>
 
   <div class="guide">
-    <b>사용 방법</b><br>
-    1. 아래 내용을 채워주세요. (입력한 내용은 <b>설정한 날짜 이후에 모두 삭제</b>돼요.)<br>
-    2. 사진은 <b>파일을 직접 업로드</b>하면 자동으로 압축·저장돼요.<br>
-    3. 마지막에 <b>원하는 주소와 수정 비밀번호</b>를 정하고 <b>💌 청첩장 만들기</b>를 누르면 짧은 링크가 완성!<br>
-    <span class="tip">✏️ 나중에 수정하려면: 같은 주소 + 같은 수정 비밀번호로 다시 만들기를 누르면 내용이 덮어써져요.</span>
+    <b>How to use?</b><br>
+    1. 아래 내용을 채워주세요.<br>
+    2. 사진은 <b>파일을 직접 업로드</b>해주세요.<br>
+    3. 입력한 내용은 <b>설정한 날짜 이후에 모두 삭제</b>되니 안심하세요.<br>
+    4. 마지막에 <b>원하는 주소와 수정 비밀번호</b>를 정하고 <b>💌 청첩장 만들기</b>를 누르면 짧은 링크가 완성!<br>
+    <span class="tip">✏️ 나중에 수정하려면: 8번에서 같은 주소 + 같은 수정 비밀번호로 다시 만들면 내용이 덮어써져요.</span>
   </div>
 
   <div class="card">
@@ -118,8 +119,8 @@ header h1 span{color:var(--sage)}
       <div class="f"><label>신부 이름</label><input id="bride" placeholder="이신부"></div>
       <div class="f"><label>신랑 영문 이름 <small>비우면 한글 이름 표시</small></label><input id="groomEn" placeholder="Sin Rang"></div>
       <div class="f"><label>신부 영문 이름 <small>비우면 한글 이름 표시</small></label><input id="brideEn" placeholder="Sin Bu"></div>
-      <div class="f"><label>신랑 부모님 성함 <small>예: 김OO·박OO</small></label><input id="groomP"></div>
-      <div class="f"><label>신부 부모님 성함</label><input id="brideP"></div>
+      <div class="f"><label>신랑 부모님 성함 <small>선택사항 </small></label><input id="groomP" placeholder="김OO·박OO"></div>
+      <div class="f"><label>신부 부모님 성함 <small>선택사항 </small></label><input id="brideP" placeholder="김OO·박OO"></div>
       <div class="f"><label>신랑 관계 <small>(예시) 장남, 차남, 아들</small></label><input id="groomOrder" placeholder="장남"></div>
       <div class="f"><label>신부 관계 <small>(예시) 장녀, 차녀, 딸</small></label><input id="brideOrder" placeholder="장녀"></div>
     </div>
@@ -153,7 +154,7 @@ header h1 span{color:var(--sage)}
   </div>
 
   <div class="card">
-    <h2><em>4.</em>문구</h2>
+    <h2><em>4.</em>문구 <small>· 선택사항</small></h2>
     <div class="f"><label>표지 감성 문구 <small>2~3줄 짧게</small></label>
       <textarea id="lead" placeholder="(예시) 서로의 계절을 지나&#10;같은 봄에 도착했습니다"></textarea></div>
 <div class="f"><label>초대 섹션 제목</label>
@@ -190,7 +191,7 @@ header h1 span{color:var(--sage)}
   </div>
 
   <div class="card">
-    <h2><em>6.</em>교통편 <small>· 비워두면 해당 항목은 표시되지 않아요</small></h2>
+    <h2><em>6.</em>교통편 <small>· 비워둔 항목은 표시되지 않아요.</small></h2>
     <div class="f"><label>지하철</label><textarea id="subway" placeholder="(예시) 2호선 OO역 3번 출구 도보 5분"></textarea></div>
     <div class="f"><label>버스</label><textarea id="bus" placeholder="(예시) OO정류장 하차 (100, 200, 300번)"></textarea></div>
     <div class="f"><label>자가용 · 주차</label><textarea id="car" placeholder="(예시) 내비게이션에 'OO웨딩홀' 검색&#10;건물 주차장 2시간 무료"></textarea></div>
@@ -198,7 +199,7 @@ header h1 span{color:var(--sage)}
   </div>
 
   <div class="card">
-    <h2><em>7.</em>마음 전하실 곳 <small>· 비워두면 이 섹션은 표시되지 않아요</small></h2>
+    <h2><em>7.</em>마음 전하실 곳 <small>· 비워둔 항목은 표시되지 않아요.</small></h2>
     <div class="f"><label>신랑측 계좌 <small>예금주 / 은행 / 계좌번호</small></label>
       <div class="acc-rows" id="accG"></div>
       <button class="addbtn" data-side="accG">+ 신랑측 계좌 추가</button>
