@@ -105,7 +105,7 @@ header h1 span{color:var(--sage)}
 
   <div class="guide">
     <b>사용 방법</b><br>
-    1. 아래 내용을 입력하세요. 입력하는 즉시 <b>이 브라우저에 자동 저장</b>돼요.<br>
+    1. 아래 내용을 채워주세요. (입력한 내용은 <b>설정한 날짜 이후에 모두 삭제</b>돼요.)<br>
     2. 사진은 <b>파일을 직접 업로드</b>하면 자동으로 압축·저장돼요.<br>
     3. 마지막에 <b>원하는 주소와 수정 비밀번호</b>를 정하고 <b>💌 청첩장 만들기</b>를 누르면 짧은 링크가 완성!<br>
     <span class="tip">✏️ 나중에 수정하려면: 같은 주소 + 같은 수정 비밀번호로 다시 만들기를 누르면 내용이 덮어써져요.</span>
@@ -114,14 +114,14 @@ header h1 span{color:var(--sage)}
   <div class="card">
     <h2><em>1.</em>신랑 · 신부</h2>
     <div class="grid2">
-      <div class="f"><label>신랑 이름</label><input id="groom" placeholder="김철수"></div>
-      <div class="f"><label>신부 이름</label><input id="bride" placeholder="이영희"></div>
-      <div class="f"><label>신랑 영문 이름 <small>비우면 한글 이름 표시</small></label><input id="groomEn" placeholder="Cheolsu"></div>
-      <div class="f"><label>신부 영문 이름 <small>비우면 한글 이름 표시</small></label><input id="brideEn" placeholder="Younghee"></div>
+      <div class="f"><label>신랑 이름</label><input id="groom" placeholder="김신랑"></div>
+      <div class="f"><label>신부 이름</label><input id="bride" placeholder="이신부"></div>
+      <div class="f"><label>신랑 영문 이름 <small>비우면 한글 이름 표시</small></label><input id="groomEn" placeholder="Sin Rang"></div>
+      <div class="f"><label>신부 영문 이름 <small>비우면 한글 이름 표시</small></label><input id="brideEn" placeholder="Sin Bu"></div>
       <div class="f"><label>신랑 부모님 성함 <small>예: 김OO·박OO</small></label><input id="groomP"></div>
       <div class="f"><label>신부 부모님 성함</label><input id="brideP"></div>
-      <div class="f"><label>신랑 관계 <small>예: 장남, 차남, 아들</small></label><input id="groomOrder" placeholder="장남"></div>
-      <div class="f"><label>신부 관계 <small>예: 장녀, 차녀, 딸</small></label><input id="brideOrder" placeholder="장녀"></div>
+      <div class="f"><label>신랑 관계 <small>(예시) 장남, 차남, 아들</small></label><input id="groomOrder" placeholder="장남"></div>
+      <div class="f"><label>신부 관계 <small>(예시) 장녀, 차녀, 딸</small></label><input id="brideOrder" placeholder="장녀"></div>
     </div>
   </div>
 
@@ -129,17 +129,17 @@ header h1 span{color:var(--sage)}
     <h2><em>2.</em>예식 일시 · 장소</h2>
     <div class="grid2">
       <div class="f"><label>예식 날짜</label><input id="date" type="date"></div>
-      <div class="f"><label>예식 시간</label><input id="time" type="time" value="12:00"></div>
-      <div class="f"><label>예식장 이름</label><input id="venue" placeholder="OO웨딩홀"></div>
-      <div class="f"><label>층 · 홀 이름</label><input id="hall" placeholder="3층 그랜드볼룸"></div>
+      <div class="f"><label>예식 시간</label><input id="time" type="time" value="(예시) 12:00"></div>
+      <div class="f"><label>예식장 이름</label><input id="venue" placeholder="(예시) OO웨딩홀"></div>
+      <div class="f"><label>층 · 홀 이름</label><input id="hall" placeholder="(예시) 3층 그랜드볼룸"></div>
     </div>
-    <div class="f"><label>도로명 주소 <small>지도 앱 버튼에 자동 연결돼요</small></label><input id="addr" placeholder="서울시 OO구 OO로 123"></div>
+    <div class="f"><label>도로명 주소 입력 <small>지도 앱 버튼에 자동 연결돼요</small></label><input id="addr" placeholder="OO시 OO구 OO로 123"></div>
   </div>
 
   <div class="card">
     <h2><em>3.</em>사진 <small>· 클릭하거나 끌어다 놓으면 업로드돼요</small></h2>
     <div class="f">
-      <label>메인(표지) 사진 <small>1장</small></label>
+      <label>상단 메인(표지) 사진 <small>1장</small></label>
       <div class="upzone" id="heroZone">📷 표지 사진 선택하기</div>
       <input type="file" id="heroFile" accept="image/*" hidden>
       <div class="thumbs" id="heroThumb"></div>
@@ -155,15 +155,15 @@ header h1 span{color:var(--sage)}
   <div class="card">
     <h2><em>4.</em>문구</h2>
     <div class="f"><label>표지 감성 문구 <small>2~3줄 짧게</small></label>
-      <textarea id="lead" placeholder="서로의 계절을 지나&#10;같은 봄에 도착했습니다"></textarea></div>
+      <textarea id="lead" placeholder="(예시) 서로의 계절을 지나&#10;같은 봄에 도착했습니다"></textarea></div>
 <div class="f"><label>초대 섹션 제목</label>
-      <input id="inviteTitle" placeholder="소중한 분들을 초대합니다"></div>
+      <input id="inviteTitle" placeholder="(예시) 소중한 분들을 초대합니다"></div>
     <div class="f"><label>갤러리 섹션 제목</label>
-      <input id="galTitle" placeholder="우리의 순간들"></div>
+      <input id="galTitle" placeholder="(예시) 우리의 순간들"></div>
     <div class="f"><label>초대 말씀</label>
-      <textarea id="msg" style="min-height:150px" placeholder="서로 다른 두 사람이 만나&#10;하나의 길을 걸어가려 합니다.&#10;&#10;귀한 걸음 하시어&#10;저희의 시작을 축복해 주세요."></textarea></div>
+      <textarea id="msg" style="min-height:150px" placeholder="(예시) 서로 다른 두 사람이 만나&#10;하나의 길을 걸어가려 합니다.&#10;&#10;귀한 걸음 하시어&#10;저희의 시작을 축복해 주세요."></textarea></div>
     <div class="f"><label>맺음 문구 <small>맨 아래에 표시 · 비워도 됩니다</small></label>
-      <textarea id="footMsg" placeholder="함께해 주셔서 감사합니다."></textarea></div>
+      <textarea id="footMsg" placeholder="(예시) 함께해 주셔서 감사합니다."></textarea></div>
   </div>
 
   <div class="card">
@@ -191,10 +191,10 @@ header h1 span{color:var(--sage)}
 
   <div class="card">
     <h2><em>6.</em>교통편 <small>· 비워두면 해당 항목은 표시되지 않아요</small></h2>
-    <div class="f"><label>지하철</label><textarea id="subway" placeholder="2호선 OO역 3번 출구 도보 5분"></textarea></div>
-    <div class="f"><label>버스</label><textarea id="bus" placeholder="OO정류장 하차 (100, 200, 300번)"></textarea></div>
-    <div class="f"><label>자가용 · 주차</label><textarea id="car" placeholder="내비게이션에 'OO웨딩홀' 검색&#10;건물 주차장 2시간 무료"></textarea></div>
-    <div class="f"><label>전세버스</label><textarea id="charter" placeholder="출발지: OO / 출발 시간: 10:30"></textarea></div>
+    <div class="f"><label>지하철</label><textarea id="subway" placeholder="(예시) 2호선 OO역 3번 출구 도보 5분"></textarea></div>
+    <div class="f"><label>버스</label><textarea id="bus" placeholder="(예시) OO정류장 하차 (100, 200, 300번)"></textarea></div>
+    <div class="f"><label>자가용 · 주차</label><textarea id="car" placeholder="(예시) 내비게이션에 'OO웨딩홀' 검색&#10;건물 주차장 2시간 무료"></textarea></div>
+    <div class="f"><label>전세버스</label><textarea id="charter" placeholder="(예시) 출발지: OO / 출발 시간: 10:30"></textarea></div>
   </div>
 
   <div class="card">
@@ -212,11 +212,11 @@ header h1 span{color:var(--sage)}
   <div class="card">
     <h2><em>8.</em>청첩장 주소 만들기</h2>
     <div class="f">
-      <label>원하는 주소 <small>영문 소문자·숫자·하이픈(-)만</small></label>
+      <label>🔗원하는 주소 <small>영문 소문자·숫자·하이픈(-)만</small></label>
       <div class="slugrow"><span id="baseUrl"></span><input id="slug" placeholder="cheolsu-younghee" autocapitalize="off" autocomplete="off"></div>
     </div>
     <div class="f">
-      <label>수정 비밀번호 <small>4자 이상 · 나중에 내용을 고칠 때 필요해요. 꼭 기억하세요!</small></label>
+      <label>🔒수정 비밀번호 <small>4자 이상 · 나중에 내용을 고칠 때 필요해요. 꼭 기억하세요!</small></label>
       <input id="editKey" type="text" placeholder="예: 20261024">
     </div>
   </div>
